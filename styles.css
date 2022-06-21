@@ -8,8 +8,7 @@
   display: grid;
   justify-content: center;
   align-content: center;
-  height: 500px;
-  width: 500px;
+  height: 100vh;
   grid-template-rows: repeat(10, 200px);
   grid-template-columns: repeat(4, 200px);
   gap: 20px 50px;
