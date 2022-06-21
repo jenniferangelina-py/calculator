@@ -9,19 +9,6 @@ services:
     branch: master # optional (defaults to master)
     dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
     numInstances: 3 # optional (defaults to 1)
-    healthCheckPath: /
-    envVars:
-      - key: REDIS_HOST
-        fromService:
-          type: redis
-          name: lightning
-          property: host # available properties are listed below
-      - key: REDIS_PORT
-        fromService:
-          type: redis
-          name: lightning
-          property: port
-      - fromGroup: conc-settings
   # A private Minio instance
   - type: pserv
     name: minio
