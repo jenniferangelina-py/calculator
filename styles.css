@@ -7,8 +7,35 @@
 .container {
   display: grid;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   height: 100vh;
   grid-template-rows: repeat(10, 200px);
   grid-template-columns: repeat(4, 200px);
+  gap: 20px 50px;
+  margin: 40px 65px 20px;
+  background-color: #010101;
+}
+
+.display {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  background-color: #010101;
+}
+
+.display .operation {
+  font-size: 100px;
+  color: #FAFAFA;
+}
+
+.container > button {
+  outline: none;
+  font-size: 100px;
+  background-color: #171717;
+  border-radius: 50%;
+  color: #FAFAFA;
+}
+
+.container > button:hover {
+  font-size: 75px;
+  background-color: #444444;
 }
