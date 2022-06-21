@@ -20,11 +20,17 @@
   grid-row: 1 / -1;
   grid-column: 1 / -1;
   background-color: #010101;
+  margin: 125px 125px 0 auto;
 }
 
 .display .operation {
   font-size: 100px;
   color: #FAFAFA;
+}
+
+.display .result {
+  font-size: 75px;
+  color: #646464;
 }
 
 .container > button {
