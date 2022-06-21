@@ -5,6 +5,7 @@
 }
 
 .container {
+  width: 50vh;
   display: grid;
   justify-content: center;
   align-content: center;
