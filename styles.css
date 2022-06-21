@@ -1,1 +1,14 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: 300;
+}
 
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  grid-template-rows: repeat(10, 200px);
+  grid-template-columns: repeat(4, 200px);
+}
