@@ -70,4 +70,5 @@ button:active.green-bg {
   letter-spacing: 1px;
   margin: 10px 10px 0 auto;
   text-align: right;
+  font-weight: 300;
 }
