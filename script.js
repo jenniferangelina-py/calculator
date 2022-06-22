@@ -52,6 +52,7 @@ function appendDecimalSeparator() {
   } else {
     display += ".";
     $("#display").text(display);
+  }
 }
 
 $("#decimal-separator").click(function(){
