@@ -46,7 +46,7 @@ $("#9").click(function(){
 });
 
 function appendDecimalSeparator() {
-  if (display = "") {
+  if (display == "") {
     display = appendNumber(0) + ".";
     $("#display").text(display);
   } else {
