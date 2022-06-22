@@ -9,6 +9,7 @@ button {
   width: 50px;
   font-family: Roboto;
   font-size: 28px;
+  text-align: center;
 }
 
 button:hover {
@@ -16,7 +17,7 @@ button:hover {
 }
 
 .parentheses {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .red {
