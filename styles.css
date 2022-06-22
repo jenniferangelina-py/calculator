@@ -38,7 +38,7 @@ button:hover {
   grid-template-rows: repeat(10, 55px);
   grid-template-columns: repeat(4, 60px);
   height: 550px;
-  width: 260px;
+  width: 280px;
   background-color: #010101;
 }
 
