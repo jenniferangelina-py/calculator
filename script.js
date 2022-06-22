@@ -77,7 +77,11 @@ function appendDivisionOperator() {
   } else if (display.endsWith("÷")) {
     $("#display").text(display);
   } else if (display.endsWith("×")) {
-    
+    $("#display").text(display);
+  } else if (display.endsWith("−")) {
+    $("#display").text(display);
+  } else if (display.endsWith("+")) {
+    $("#display").text(display);
   } else {
     display += "÷";
     $("#display").text(display);
@@ -91,7 +95,13 @@ $("#division").click(function(){
 function appendMultiplicationOperator() {
   if (display === "") {
     $("#display").text(display);
+  } else if (display.endsWith("÷")) {
+    $("#display").text(display);
   } else if (display.endsWith("×")) {
+    $("#display").text(display);
+  } else if (display.endsWith("−")) {
+    $("#display").text(display);
+  } else if (display.endsWith("+")) {
     $("#display").text(display);
   } else {
     display += "×";
@@ -106,7 +116,13 @@ $("#multiplication").click(function(){
 function appendSubtractionOperator() {
   if (display === "") {
     $("#display").text(display);
+  } else if (display.endsWith("÷")) {
+    $("#display").text(display);
+  } else if (display.endsWith("×")) {
+    $("#display").text(display);
   } else if (display.endsWith("−")) {
+    $("#display").text(display);
+  } else if (display.endsWith("+")) {
     $("#display").text(display);
   } else {
     display += "−";
@@ -120,6 +136,12 @@ $("#subtraction").click(function(){
 
 function appendAdditionOperator() {
   if (display === "") {
+    $("#display").text(display);
+  } else if (display.endsWith("÷")) {
+    $("#display").text(display);
+  } else if (display.endsWith("×")) {
+    $("#display").text(display);
+  } else if (display.endsWith("−")) {
     $("#display").text(display);
   } else if (display.endsWith("+")) {
     $("#display").text(display);
