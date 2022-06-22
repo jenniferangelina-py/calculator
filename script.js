@@ -154,3 +154,11 @@ function appendAdditionOperator() {
 $("#addition").click(function(){
   appendAdditionOperator();
 });
+
+function clear() {
+  display = "";
+}
+
+$("#clear").click(function(){
+  clear();
+});
