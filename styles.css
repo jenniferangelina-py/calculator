@@ -37,6 +37,7 @@ button:hover {
   justify-content: center;
   grid-template-rows: repeat(10, 55px);
   grid-template-columns: repeat(4, 60px);
+  background-color: #010101;
 }
 
 .display {
