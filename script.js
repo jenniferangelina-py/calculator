@@ -76,6 +76,8 @@ function appendDivisionOperator() {
     $("#display").text(display);
   } else if (display.endsWith("÷")) {
     $("#display").text(display);
+  } else if (display.endsWith("×")) {
+    
   } else {
     display += "÷";
     $("#display").text(display);
