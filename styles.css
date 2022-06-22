@@ -5,9 +5,10 @@ button {
   border-radius: 50%;
   background-color: #171717;
   color: #FAFAFA;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   font-family: Roboto;
+  font-size: 32px;
 }
 
 button:hover {
@@ -15,7 +16,7 @@ button:hover {
 }
 
 .parentheses {
-  font-size: 10px;
+  font-size: 28px;
 }
 
 .red {
@@ -34,6 +35,6 @@ button:hover {
 .grid {
   display: grid;
   justify-content: center;
-  grid-template-rows: repeat(10, 100px);
-  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(10, 75px);
+  grid-template-columns: repeat(4, 75px);
 }
