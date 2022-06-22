@@ -157,6 +157,7 @@ $("#addition").click(function(){
 
 function clear() {
   display = "";
+  $("#display").text(display);
 }
 
 $("#clear").click(function(){
