@@ -6,57 +6,57 @@ function appendNumber(number) {
 }
 
 $("#0").click(function(){
-  appendNumber(0);
+  appendNumber("0");
 });
 
 $("#1").click(function(){
-  appendNumber(1);
+  appendNumber("1");
 });
 
 $("#2").click(function(){
-  appendNumber(2);
+  appendNumber("2");
 });
 
 $("#3").click(function(){
-  appendNumber(3);
+  appendNumber("3");
 });
 
 $("#4").click(function(){
-  appendNumber(4);
+  appendNumber("4");
 });
 
 $("#5").click(function(){
-  appendNumber(5);
+  appendNumber("5");
 });
 
 $("#6").click(function(){
-  appendNumber(6);
+  appendNumber("6");
 });
 
 $("#7").click(function(){
-  appendNumber(7);
+  appendNumber("7");
 });
 
 $("#8").click(function(){
-  appendNumber(8);
+  appendNumber("8");
 });
 
 $("#9").click(function(){
-  appendNumber(9);
+  appendNumber("9");
 });
 
 function appendDecimalSeparator() {
   if (display === "") {
-    display = 0 + ".";
+    display = "0.";
     $("#display").text(display);
   } else if (display.endsWith("÷")) {
-    display += 0 + ".";
+    display += "0.";
   } else if (display.endsWith("×")) {
-    display += 0 + ".";
+    display += "0.";
   } else if (display.endsWith("−")) {
-    display += 0 + ".";
+    display += "0.";
   } else if (display.endsWith("+")) {
-    display += 0 + ".";
+    display += "0.";
   } else {
     display += ".";
     $("#display").text(display);
