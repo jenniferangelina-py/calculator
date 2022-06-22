@@ -22,7 +22,7 @@ $("#3").click(function(){
 });
 
 $("#4").click(function(){
-  appendN(4);
+  append(4);
 });
 
 $("#5").click(function(){
