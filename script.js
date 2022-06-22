@@ -49,8 +49,6 @@ function appendDecimalSeparator() {
   if (display === "") {
     display = 0 + ".";
     $("#display").text(display);
-  } else if (display.endsWith(".") {
-    $("#display").text(display);
   } else {
     display += ".";
     $("#display").text(display);
