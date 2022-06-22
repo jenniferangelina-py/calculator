@@ -2,6 +2,7 @@ button {
   border: 1px solid #171717;
   border-radius: 50%;
   background-color: #171717;
+  color: #FAFAFA;
 }
 
 .green {
@@ -9,5 +10,6 @@ button {
 }
 
 .green-bg {
+  border: 1px solid #427E04;
   background-color: #427E04;
 }
