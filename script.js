@@ -71,5 +71,5 @@ function appendDivisionOperator() {
 }
 
 $("#division").click(function(){
-  appendDivisionOperator;
+  appendDivisionOperator();
 });
