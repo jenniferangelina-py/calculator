@@ -8,8 +8,7 @@ button {
   height: 50px;
   width: 50px;
   font-family: Roboto;
-  font-size: 28px;
-  text-align: center;
+  font-size: 25px;
 }
 
 button:hover {
@@ -36,6 +35,6 @@ button:hover {
 .grid {
   display: grid;
   justify-content: center;
-  grid-template-rows: repeat(10, 75px);
-  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: repeat(10, 65px);
+  grid-template-columns: repeat(4, 65px);
 }
