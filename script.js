@@ -1,5 +1,6 @@
 function appendNumber(number) {
-  document.getElementById("display").innerHTML = number;
+  document.getElementById("display").innerHTML = [];
+  document.getElementById("display").innerHTML.push(number);
 }
 
 $("#1").click(function(){
