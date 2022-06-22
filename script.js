@@ -46,5 +46,5 @@ $("#9").click(function(){
 });
 
 $("#decimal-separator").click(function(){
-  append(".");
+  append(.);
 });
