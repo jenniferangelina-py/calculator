@@ -1,50 +1,63 @@
 var display = "";
 
-function append(element) {
-  display += element;
+function appendNumber(number) {
+  display += number;
   $("#display").text(display);
 }
 
 $("#0").click(function(){
-  append(0);
+  appendNumber(0);
 });
 
 $("#1").click(function(){
-  append(1);
+  appendNumber(1);
 });
 
 $("#2").click(function(){
-  append(2);
+  appendNumber(2);
 });
 
 $("#3").click(function(){
-  append(3);
+  appendNumber(3);
 });
 
 $("#4").click(function(){
-  append(4);
+  appendNumber(4);
 });
 
 $("#5").click(function(){
-  append(5);
+  appendNumber(5);
 });
 
 $("#6").click(function(){
-  append(6);
+  appendNumber(6);
 });
 
 $("#7").click(function(){
-  append(7);
+  appendNumber(7);
 });
 
 $("#8").click(function(){
-  append(8);
+  appendNumber(8);
 });
 
 $("#9").click(function(){
-  append(9);
+  appendNumber(9);
 });
 
+function appendDecimalSeparator() {
+  if (display = "") {
+    display = 0 + ".";
+    $("#display").text(display);
+  } else {
+    display += ".";
+    $("#display").text(display);
+}
+
 $("#decimal-separator").click(function(){
+  appendDecimalSeparator();
+});
+
+$("#division").click(function(){
   append(".");
 });
