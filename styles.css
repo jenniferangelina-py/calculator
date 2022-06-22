@@ -21,11 +21,11 @@ button:hover {
 }
 
 .smaller {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 button:active.smaller {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .red {
