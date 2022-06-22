@@ -20,12 +20,12 @@ button:hover {
   cursor: pointer;
 }
 
-.smaller {
-  font-size: 15px;
+.small {
+  font-size: 18.5px;
 }
 
-button:active.smaller {
-  font-size: 10px;
+button:active.small {
+  font-size: 13.5px;
 }
 
 .red {
