@@ -36,6 +36,10 @@ button:hover {
   background-color: #427E04;
 }
 
+button:hover .green-bg {
+  background-color: #679734;
+}  
+
 .grid {
   display: grid;
   justify-items: center;
