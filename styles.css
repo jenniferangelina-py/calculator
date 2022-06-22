@@ -1,3 +1,7 @@
+button {
+  outline: none;
+}
+
 .green {
   color: #9CD260;
 }
