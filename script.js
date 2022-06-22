@@ -49,6 +49,14 @@ function appendDecimalSeparator() {
   if (display === "") {
     display = 0 + ".";
     $("#display").text(display);
+  } else if (display.endsWith("÷")) {
+    display += 0 + ".";
+  } else if (display.endsWith("×")) {
+    display += 0 + ".";
+  } else if (display.endsWith("−")) {
+    display += 0 + ".";
+  } else if (display.endsWith("+")) {
+    display += 0 + ".";
   } else {
     display += ".";
     $("#display").text(display);
@@ -72,4 +80,49 @@ function appendDivisionOperator() {
 
 $("#division").click(function(){
   appendDivisionOperator();
+});
+
+function appendMultiplicationOperator() {
+  if (display === "") {
+    $("#display").text(display);
+  } else if (display.endsWith("×")) {
+    $("#display").text(display);
+  } else {
+    display += "×";
+    $("#display").text(display);
+  }
+}
+
+$("#multiplication").click(function(){
+  appendMultiplicationOperator();
+});
+
+function appendSubtractionOperator() {
+  if (display === "") {
+    $("#display").text(display);
+  } else if (display.endsWith("−")) {
+    $("#display").text(display);
+  } else {
+    display += "−";
+    $("#display").text(display);
+  }
+}
+
+$("#subtraction").click(function(){
+  appendSubtractionOperator();
+});
+
+function appendAdditionOperator() {
+  if (display === "") {
+    $("#display").text(display);
+  } else if (display.endsWith("+")) {
+    $("#display").text(display);
+  } else {
+    display += "+";
+    $("#display").text(display);
+  }
+}
+
+$("#addition").click(function(){
+  appendAdditionOperator();
 });
