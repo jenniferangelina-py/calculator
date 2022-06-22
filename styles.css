@@ -10,8 +10,12 @@ button {
   font-family: Roboto;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .parentheses {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .red {
@@ -25,4 +29,9 @@ button {
 .green-bg {
   border: 1px solid #427E04;
   background-color: #427E04;
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
 }
