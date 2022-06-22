@@ -64,4 +64,6 @@ button:active.green-bg {
 
 #display {
   color: #FAFAFA;
+  font-family: Roboto;
+  font-size: 25px;  
 }
