@@ -65,5 +65,6 @@ button:active.green-bg {
 #display {
   color: #FAFAFA;
   font-family: Roboto;
-  font-size: 25px;  
+  font-size: 25px;
+  word-spacing: 1px;
 }
