@@ -1,7 +1,7 @@
 var display = "";
 
-function append(number) {
-  display += number;
+function append(element) {
+  display += element;
   $("#display").text(display);
 }
 
@@ -43,4 +43,8 @@ $("#8").click(function(){
 
 $("#9").click(function(){
   append(9);
+});
+
+$("#decimal-separator").click(function(){
+  append(".");
 });
