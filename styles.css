@@ -39,7 +39,7 @@ button:hover {
   grid-template-columns: repeat(4, 60px);
   height: 550px;
   width: 240px;
-  margin: auto;
+  text-align: center;
   background-color: #010101;
 }
 
