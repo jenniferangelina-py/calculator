@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-body {
-  margin: auto;
-}
-
 button {
   border: 1px solid #171717;
   border-radius: 50%;
@@ -38,12 +34,10 @@ button:hover {
 
 .grid {
   display: grid;
-  justify-content: center;
   grid-template-rows: repeat(10, 55px);
   grid-template-columns: repeat(4, 60px);
   height: 550px;
   width: 240px;
-  align-items: center;
   background-color: #010101;
 }
 
