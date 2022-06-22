@@ -2,10 +2,11 @@
 
 button {
   border: 1px solid #171717;
-  border-radius: 100%;
+  border-radius: 50%;
   background-color: #171717;
   color: #FAFAFA;
-  padding: 20px;
+  height: 15px;
+  width: 15px;
   font-family: Roboto;
 }
 
