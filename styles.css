@@ -10,6 +10,10 @@ button {
   font-family: Roboto;
 }
 
+.parentheses {
+  font-size: 12px;
+}
+
 .red {
   color: #FF6666;
 }
