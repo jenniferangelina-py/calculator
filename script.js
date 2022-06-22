@@ -2,7 +2,7 @@ var display = "";
 
 function appendNumber(number) {
   display += number;
-  document.getElementById("display").innerHTML = display;
+  $("#display").text(display);
 }
 
 $("#1").click(function(){
