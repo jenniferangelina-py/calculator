@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+body {
+  margin: auto;
+}
+
 button {
   border: 1px solid #171717;
   border-radius: 50%;
