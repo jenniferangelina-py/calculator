@@ -40,7 +40,7 @@ button:hover {
   height: 550px;
   width: 240px;
   background-color: #010101;
-  margin-left: auto;
+  margin: auto;
 }
 
 .display {
