@@ -51,12 +51,16 @@ function appendDecimalSeparator() {
     $("#display").text(display);
   } else if (display.endsWith("÷")) {
     display += "0.";
+    $("#display").text(display);
   } else if (display.endsWith("×")) {
     display += "0.";
+    $("#display").text(display);
   } else if (display.endsWith("−")) {
     display += "0.";
+    $("#display").text(display);
   } else if (display.endsWith("+")) {
     display += "0.";
+    $("#display").text(display);
   } else {
     display += ".";
     $("#display").text(display);
