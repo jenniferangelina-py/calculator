@@ -11,11 +11,6 @@ button {
   font-size: 25px;
 }
 
-button:active {
-  border: 1px solid #444444;
-  background-color: #444444;
-  font-size: 10px;
-
 button:hover {
   cursor: pointer;
 }
