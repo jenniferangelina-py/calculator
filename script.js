@@ -1,46 +1,46 @@
 var display = "";
 
-function appendNumber(number) {
+function append(number) {
   display += number;
   $("#display").text(display);
 }
 
 $("#0").click(function(){
-  appendNumber(0);
+  append(0);
 });
 
 $("#1").click(function(){
-  appendNumber(1);
+  append(1);
 });
 
 $("#2").click(function(){
-  appendNumber(2);
+  append(2);
 });
 
 $("#3").click(function(){
-  appendNumber(3);
+  append(3);
 });
 
 $("#4").click(function(){
-  appendNumber(4);
+  appendN(4);
 });
 
 $("#5").click(function(){
-  appendNumber(5);
+  append(5);
 });
 
 $("#6").click(function(){
-  appendNumber(6);
+  append(6);
 });
 
 $("#7").click(function(){
-  appendNumber(7);
+  append(7);
 });
 
 $("#8").click(function(){
-  appendNumber(8);
+  append(8);
 });
 
 $("#9").click(function(){
-  appendNumber(9);
+  append(9);
 });
