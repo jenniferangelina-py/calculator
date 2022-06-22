@@ -5,6 +5,10 @@ function appendNumber(number) {
   $("#display").text(display);
 }
 
+$("#0").click(function(){
+  appendNumber(0);
+});
+
 $("#1").click(function(){
   appendNumber(1);
 });
