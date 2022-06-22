@@ -36,7 +36,7 @@ button:hover {
   background-color: #427E04;
 }
 
-.green-bg button:hover {
+button:hover.green-bg {
   background-color: #679734;
 }  
 
