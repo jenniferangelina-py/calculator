@@ -1,7 +1,7 @@
 var display = "";
 
 function appendNumber(number) {
-  if (isEqualsClicked === false)
+  if (isEqualsClicked === false) {
     display += number;
     $("#display").text(display);
   } else {
