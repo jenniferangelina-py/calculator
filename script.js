@@ -172,4 +172,9 @@ function appendPercentage() {
   } else {
     display += "%";
     $("#display").text(display);
+  }
 }
+
+$("#percentage").click(function(){
+  appendPercentage();
+});
