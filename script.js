@@ -257,6 +257,6 @@ function appendParentheses() {
   }
 }
 
-$("parentheses").click(function(){
+$("#parentheses").click(function(){
   appendParentheses();
 });
