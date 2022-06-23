@@ -207,6 +207,7 @@ function equals() {
   result = eval(display);
   display = result;
   $("#display").text(display);
+  display = String(display);
 }
 
 $("#equals").click(function(){
