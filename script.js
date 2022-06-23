@@ -128,7 +128,7 @@ function appendMultiplicationOperator() {
     $("#display").text(display);
   } else {
     display += "×";
-    $("#display").text(display);
+    $("#display").text(display).css("color", "blue");
   }
 }
 
