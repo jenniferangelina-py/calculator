@@ -214,6 +214,7 @@ function equals() {
     display = display.replace("÷", "/");
     display = display.replace("×", "*");
     display = display.replace("−", "-");
+    display = display.replace("%", "/100");
     result = eval(display);
     display = result;
     $("#display").text(display);
