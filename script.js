@@ -206,6 +206,7 @@ $("#percentage").click(function(){
 function equals() {
   result = eval(display);
   display = result;
+  $("#display").text(display);
 }
 
 $("#equals").click(function(){
