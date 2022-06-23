@@ -206,10 +206,12 @@ $("#percentage").click(function(){
 });
 
 function equals() {
-  if (!display.endsWith("÷") ||
-  !display.endsWith("×") ||
-  !display.endsWith("−") ||
-  !display.endsWith("+")) {
+  if (display.endsWith("÷")
+    || display.endsWith("×")
+    || display.endsWith("−")
+    || display.endsWith("+")) {
+    $("#display").text(display);
+  } else {
     display = display.replace("÷", "/");
     display = display.replace("×", "*");
     display = display.replace("−", "-");
