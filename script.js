@@ -220,6 +220,7 @@ function equals() {
     || display.endsWith("+")) {
     $("#display").text(display);
   } else {
+    isEqualsClicked = true;
     display = display.replace("÷", "/");
     display = display.replace("×", "*");
     display = display.replace("−", "-");
