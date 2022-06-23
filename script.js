@@ -8,7 +8,7 @@ function appendNumber(number) {
     isEqualsClicked = false;
     display = "";
     display += number;
-    $("#display").text(display);
+    $("#display").text(display).css("color", "red");
   }
 }
 
