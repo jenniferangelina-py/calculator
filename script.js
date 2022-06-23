@@ -94,6 +94,8 @@ function appendDivisionOperator() {
     display = display.slice(0, -1);
     display += "÷";
     $("#display").text(display);
+  } else if (display.endsWith("(")) {
+    $("#display").text(display);
   } else {
     display += "÷";
     $("#display").text(display);
@@ -120,6 +122,8 @@ function appendMultiplicationOperator() {
   } else if (display.endsWith("+")) {
     display = display.slice(0, -1);
     display += "×";
+    $("#display").text(display);
+  } else if (display.endsWith("(")) {
     $("#display").text(display);
   } else {
     display += "×";
@@ -196,21 +200,6 @@ $("#clear").click(function(){
   clear();
 });
 
-function appendPercentage() {
-  if (display === "") {
-  $("#display").text(display);
-  } else if (display.endsWith("%")) {
-    $("#display").text(display);
-  } else {
-    display += "%";
-    $("#display").text(display);
-  }
-}
-
-$("#percentage").click(function(){
-  appendPercentage();
-});
-
 var isEqualsClicked = false;
 
 function equals() {
@@ -246,6 +235,8 @@ function appendPercentage() {
     $("#display").text(display);
   } else if (display.endsWith("+")) {
     $("#display").text(display);
+  } else if (display.endsWith("(")) {
+    $("#display").text(display);
   } else {
     display += "%";
     $("#display").text(display);
@@ -254,4 +245,15 @@ function appendPercentage() {
 
 $("percentage").click(function(){
   appendPercentage();
+});
+
+function appendParentheses() {
+  if (display === "" 
+  || display.endsWith("(")) {
+    display += "(";
+    $("#display").text(display);
+}
+
+$("parentheses").click(function(){
+  appendParentheses();
 });
