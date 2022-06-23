@@ -77,7 +77,7 @@ function appendDivisionOperator() {
   } else if (display.endsWith("÷")) ||
     (display.endsWith("×")) ||
     (display.endsWith("−")) ||
-    (display.endsWith("+")) || {
+    (display.endsWith("+")) {
     $("#display").text(display);
   } else {
     display += "÷";
