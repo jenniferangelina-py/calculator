@@ -244,7 +244,7 @@ function appendPercentage() {
   }
 }
 
-$("percentage").click(function(){
+$("#percentage").click(function(){
   appendPercentage();
 });
 
