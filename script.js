@@ -3,12 +3,12 @@ var display = "";
 function appendNumber(number) {
   if (isEqualsClicked === false) {
     display += number;
-    $("#display").text(display).css("color", "red");
+    $("#display").text(display);
   } else {
     isEqualsClicked = false;
     display = "";
     display += number;
-    $("#display").text(display).css("color", "red");
+    $("#display").text(display);
   }
 }
 
@@ -128,7 +128,7 @@ function appendMultiplicationOperator() {
     $("#display").text(display);
   } else {
     display += "×";
-    $("#display").text(display).css("color", "blue");
+    $("#display").text(display);
   }
 }
 
