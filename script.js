@@ -5,6 +5,7 @@ function appendNumber(number) {
     display += number;
     $("#display").text(display);
   } else {
+    isEqualsClicked = false;
     display = "";
     display += number;
     $("#display").text(display);
