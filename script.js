@@ -74,13 +74,10 @@ $("#decimal-separator").click(function(){
 function appendDivisionOperator() {
   if (display === "") {
     $("#display").text(display);
-  } else if (display.endsWith("÷")) {
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
+  } else if (display.endsWith("÷")) ||
+    (display.endsWith("×")) ||
+    (display.endsWith("−")) ||
+    (display.endsWith("+")) || {
     $("#display").text(display);
   } else {
     display += "÷";
@@ -178,3 +175,4 @@ function appendPercentage() {
 $("#percentage").click(function(){
   appendPercentage();
 });
+
