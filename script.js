@@ -77,10 +77,16 @@ function appendDivisionOperator() {
   } else if (display.endsWith("÷")) {
     $("#display").text(display);
   } else if (display.endsWith("×")) {
+    display.slice(0, -1);
+    display += "÷";
     $("#display").text(display);
   } else if (display.endsWith("−")) {
+    display.slice(0, -1);
+    display += "÷";
     $("#display").text(display);
   } else if (display.endsWith("+")) {
+    display.slice(0, -1);
+    display += "÷";
     $("#display").text(display);
   } else {
     display += "÷";
