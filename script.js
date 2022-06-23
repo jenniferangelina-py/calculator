@@ -163,3 +163,13 @@ function clear() {
 $("#clear").click(function(){
   clear();
 });
+
+function appendPercentage() {
+  if (display === "") {
+  $("#display").text(display);
+  } else if (display.endsWith("%")) {
+    $("#display").text(display);
+  } else {
+    display += "%";
+    $("#display").text(display);
+}
