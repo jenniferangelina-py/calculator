@@ -1,8 +1,14 @@
 var display = "";
 
 function appendNumber(number) {
-  display += number;
-  $("#display").text(display);
+  if (isEqualsClicked === false)
+    display += number;
+    $("#display").text(display);
+  } else {
+    display = "";
+    display += number;
+    $("#display").text(display);
+  }
 }
 
 $("#0").click(function(){
@@ -204,6 +210,8 @@ function appendPercentage() {
 $("#percentage").click(function(){
   appendPercentage();
 });
+
+var isEqualsClicked = false;
 
 function equals() {
   if (display.endsWith("÷")
