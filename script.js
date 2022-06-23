@@ -208,7 +208,10 @@ function equals() {
     || display.endsWith("−")
     || display.endsWith("+")) {
     $("#display").text(display);
-  } else {
+  } else if (display.includes("÷")
+    || display.includes("×")
+    || display.includes("−")
+    || display.includes("+")) {
     isEqualsClicked = true;
     display = display.replace("÷", "/");
     display = display.replace("×", "*");
