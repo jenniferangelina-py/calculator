@@ -102,12 +102,18 @@ function appendMultiplicationOperator() {
   if (display === "") {
     $("#display").text(display);
   } else if (display.endsWith("÷")) {
+    display = display.slice(0, -1);
+    display += "×";
     $("#display").text(display);
   } else if (display.endsWith("×")) {
     $("#display").text(display);
   } else if (display.endsWith("−")) {
+    display = display.slice(0, -1);
+    display += "×";
     $("#display").text(display);
   } else if (display.endsWith("+")) {
+    display = display.slice(0, -1);
+    display += "×";
     $("#display").text(display);
   } else {
     display += "×";
@@ -123,12 +129,18 @@ function appendSubtractionOperator() {
   if (display === "") {
     $("#display").text(display);
   } else if (display.endsWith("÷")) {
+    display = display.slice(0, -1);
+    display += "−";
     $("#display").text(display);
   } else if (display.endsWith("×")) {
+    display = display.slice(0, -1);
+    display += "−";
     $("#display").text(display);
   } else if (display.endsWith("−")) {
     $("#display").text(display);
   } else if (display.endsWith("+")) {
+    display = display.slice(0, -1);
+    display += "−";
     $("#display").text(display);
   } else {
     display += "−";
@@ -144,10 +156,16 @@ function appendAdditionOperator() {
   if (display === "") {
     $("#display").text(display);
   } else if (display.endsWith("÷")) {
+    display = display.slice(0, -1);
+    display += "+";
     $("#display").text(display);
   } else if (display.endsWith("×")) {
+    display = display.slice(0, -1);
+    display += "+";
     $("#display").text(display);
   } else if (display.endsWith("−")) {
+    display = display.slice(0, -1);
+    display += "+";
     $("#display").text(display);
   } else if (display.endsWith("+")) {
     $("#display").text(display);
