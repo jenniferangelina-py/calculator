@@ -204,14 +204,7 @@ $("#percentage").click(function(){
 });
 
 function equals() {
-  switch () {
-    case "÷":
-      return /;
-    case "×":
-      return *;
-    case "−":
-      return -;
-  }
+  display = display.replace("÷", /);
   result = eval(display);
   display = result;
   $("#display").text(display);
