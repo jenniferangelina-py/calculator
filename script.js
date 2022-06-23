@@ -260,3 +260,18 @@ function appendParentheses() {
 $("#parentheses").click(function(){
   appendParentheses();
 });
+
+var shadowResult = "";
+
+function appendShadowResult() {
+  display = display.replace("÷", "/");
+  display = display.replace("×", "*");
+  display = display.replace("−", "-");
+  display = display.replace("%", "/100");
+  shadowResult = eval(display);
+  $("#shadowResult").text(shadowResult);
+}
+
+$("#shadow-result").click(function(){
+  appendShadowResult();
+});
