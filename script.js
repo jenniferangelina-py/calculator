@@ -206,13 +206,18 @@ $("#percentage").click(function(){
 });
 
 function equals() {
-  display = display.replace("÷", "/");
-  display = display.replace("×", "*");
-  display = display.replace("−", "-");
-  result = eval(display);
-  display = result;
-  $("#display").text(display);
-  display = String(display);
+  if !(display.endsWith("÷") ||
+  display.endsWith("×") ||
+  display.endsWith("−") ||
+  display.endsWith("+")) {
+    display = display.replace("÷", "/");
+    display = display.replace("×", "*");
+    display = display.replace("−", "-");
+    result = eval(display);
+    display = result;
+    $("#display").text(display);
+    display = String(display);
+  }
 }
 
 $("#equals").click(function(){
