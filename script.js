@@ -216,3 +216,24 @@ function equals() {
 $("#equals").click(function(){
   equals();
 });
+
+function appendPercentage() {
+  if (display === "") {
+    $("#display").text(display);
+  } else if (display.endsWith("÷")) {
+    $("#display").text(display);
+  } else if (display.endsWith("×")) {
+    $("#display").text(display);
+  } else if (display.endsWith("−")) {
+    $("#display").text(display);
+  } else if (display.endsWith("+")) {
+    $("#display").text(display);
+  } else {
+    display += "%";
+    $("#display").text(display);
+  }
+}
+
+$("percentage").click(function(){
+  appendPercentage();
+});
