@@ -211,7 +211,8 @@ function equals() {
   } else if (display.includes("÷")
     || display.includes("×")
     || display.includes("−")
-    || display.includes("+")) {
+    || display.includes("+")
+    || display.includes("%") {
     isEqualsClicked = true;
     display = display.replace("÷", "/");
     display = display.replace("×", "*");
