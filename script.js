@@ -1,4 +1,5 @@
 var display = "";
+var isEqualsClicked = false;
 
 function appendNumber(number) {
   if (isEqualsClicked === false) {
@@ -200,8 +201,6 @@ function clear() {
 $("#clear").click(function(){
   clear();
 });
-
-var isEqualsClicked = false;
 
 function equals() {
   if (display.endsWith("÷")
