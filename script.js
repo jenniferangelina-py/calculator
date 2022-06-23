@@ -4,11 +4,11 @@ function appendNumber(number) {
   if (isEqualsClicked === false) {
     display += number;
     $("#display").text(display);
-  } else if (isEqualsClicked === true) {
-    isEqualsClicked = false;
+  } else if {
     display = "";
     display += number;
     $("#display").text(display);
+    isEqualsClicked = false;
   }
 }
 
