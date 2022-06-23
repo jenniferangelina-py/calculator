@@ -252,6 +252,7 @@ function appendParentheses() {
   || display.endsWith("(")) {
     display += "(";
     $("#display").text(display);
+  }
 }
 
 $("parentheses").click(function(){
