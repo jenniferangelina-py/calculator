@@ -202,3 +202,12 @@ function appendPercentage() {
 $("#percentage").click(function(){
   appendPercentage();
 });
+
+function equals() {
+  result = eval(display);
+  display = result;
+}
+
+$("#equals").click(function(){
+  equals();
+});
