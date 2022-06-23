@@ -3,7 +3,7 @@ var display = "";
 function appendNumber(number) {
   if (isEqualsClicked === false) {
     display += number;
-    $("#display").text(display);
+    $("#display").text(display).css("color", "red");
   } else {
     isEqualsClicked = false;
     display = "";
