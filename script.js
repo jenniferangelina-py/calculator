@@ -211,7 +211,7 @@ function equals() {
     || display.includes("×")
     || display.includes("−")
     || display.includes("+")
-    || display.includes("%") {
+    || display.includes("%")) {
     display = display.replace("÷", "/");
     display = display.replace("×", "*");
     display = display.replace("−", "-");
