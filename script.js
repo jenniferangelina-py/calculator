@@ -9,6 +9,8 @@ function appendNumber(number) {
     display += number;
     $("#display").text(display);
     isEqualsClicked = false;
+  }
+}
 
 $("#0").click(function(){
   appendNumber("0");
