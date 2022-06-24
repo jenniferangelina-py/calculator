@@ -2,10 +2,10 @@ var display = "";
 
 function appendNumber(number) {
   if (!isEqualsClicked) {
-    display = "";
     display += number;
     $("#display").text(display);
   } else {
+    display = "";
     display += number;
     $("#display").text(display);
     isEqualsClicked = false;
