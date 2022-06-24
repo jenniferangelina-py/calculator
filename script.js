@@ -7,7 +7,7 @@ function appendNumber(number) {
     display += number;
     $("#display").text(display);
     isEqualsClicked = false;
-  } else {
+  } else if (isEqualsClicked = false) {
     display += number;
     $("#display").text(display);
   }
