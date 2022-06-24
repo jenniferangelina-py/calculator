@@ -260,3 +260,5 @@ function appendParentheses() {
 $("#parentheses").click(function(){
   appendParentheses();
 });
+
+console.log(display);
