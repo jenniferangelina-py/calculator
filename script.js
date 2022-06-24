@@ -2,14 +2,14 @@ var display = "";
 var isEqualsClicked = false;
 
 function appendNumber(number) {
-  if (isEqualsClicked) {
+  if (isEqualsClicked === false) {
+    display += number;
+    $("#display").text(display);
+  } else if (isEqualsClicked === true) {
     display = "";
     display += number;
     $("#display").text(display);
     isEqualsClicked = false;
-  } else if (isEqualsClicked = false) {
-    display += number;
-    $("#display").text(display);
   }
 }
 
