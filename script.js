@@ -1,4 +1,5 @@
 var display = "";
+var isEqualsClicked = false;
 
 function appendNumber(number) {
   if (!isEqualsClicked) {
