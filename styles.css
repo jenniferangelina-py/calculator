@@ -73,6 +73,7 @@ button:active.green-bg {
 }
 
 #shadow-result {
+  grid-column: span 4;
   background-color: #010101;
   width: 100%;
   color: #FAFAFA;
