@@ -57,14 +57,11 @@ button:active.green-bg {
   margin: auto;
 }
 
-.display {
+#display {
   grid-row: span 5;
   grid-column: span 4;
   background-color: #010101;
   width: 100%;
-}
-
-#display {
   color: #FAFAFA;
   font-family: "Roboto";
   font-weight: 300;
