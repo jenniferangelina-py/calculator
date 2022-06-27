@@ -25,10 +25,31 @@ function appendDecimalSeparator() {
     display.endsWith("−")
     ||
     display.endsWith("+")
+    ||
+    display.endsWith("(")
   ) {
     display += "0.";
     $("#display").text(display);
   }
+}
+
+function appendOperator(operator) {
+  if (display === "") {
+    $("#display").text(display);
+  } else if (
+    display.endsWith("÷")
+    ||
+    display.endsWith("×")
+    ||
+    display.endsWith("−")
+    ||
+    display.endsWith("+")
+    ||
+    display.endsWith("(")
+  ) {
+    display = display.slice(0, -1);
+    display += operator;
+    $("#display").text(display);
 }
 
 $("#0").click(function(){
@@ -75,33 +96,8 @@ $("#decimal-separator").click(function(){
   appendDecimalSeparator();
 });
 
-function appendDivisionOperator() {
-  if (display === "") {
-    $("#display").text(display);
-  } else if (display.endsWith("÷")) {
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    display = display.slice(0, -1);
-    display += "÷";
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    display = display.slice(0, -1);
-    display += "÷";
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
-    display = display.slice(0, -1);
-    display += "÷";
-    $("#display").text(display);
-  } else if (display.endsWith("(")) {
-    $("#display").text(display);
-  } else {
-    display += "÷";
-    $("#display").text(display);
-  }
-}
-
 $("#division").click(function(){
-  appendDivisionOperator();
+  appendOperator("÷");
 });
 
 function appendMultiplicationOperator() {
@@ -130,7 +126,7 @@ function appendMultiplicationOperator() {
 }
 
 $("#multiplication").click(function(){
-  appendMultiplicationOperator();
+  appendOperator("×");
 });
 
 function appendSubtractionOperator() {
@@ -159,7 +155,7 @@ function appendSubtractionOperator() {
 }
 
 $("#subtraction").click(function(){
-  appendSubtractionOperator();
+  appendOperator("−");
 });
 
 function appendAdditionOperator() {
@@ -186,7 +182,7 @@ function appendAdditionOperator() {
 }
 
 $("#addition").click(function(){
-  appendAdditionOperator();
+  appendOperator("+");
 });
 
 function clear() {
