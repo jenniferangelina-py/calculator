@@ -12,11 +12,14 @@ function clear() {
 }
 
 function appendParentheses() {
-  if (display === "" 
-  || display.endsWith("(")) {
-    display += "(";
-    $("#display").text(display);
+  if (
+    display === "" 
+    || 
+    display.endsWith("(")
+  ) {
+    display += "(";  
   }
+  $("#display").text(display);
 }
 
 function appendNumber(number) {
