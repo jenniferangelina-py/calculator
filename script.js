@@ -63,12 +63,9 @@ function appendOperator(operator) {
     display.endsWith("(")
   ) {
     display = display.slice(0, -1);
-    display += operator;
-    $("#display").text(display);
-  } else {
-    display += operator;
-    $("#display").text(display);
   }
+  display += operator;
+  $("#display").text(display);
 }
 
 $("#clear").click(function(){
