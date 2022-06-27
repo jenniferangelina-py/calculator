@@ -147,16 +147,6 @@ $("#equals").click(function(){
 
 function equals() {
   if (
-    display.endsWith("÷")
-    || 
-    display.endsWith("×")
-    || 
-    display.endsWith("−")
-    || 
-    display.endsWith("+")
-  ) {
-    $("#display").text(display);
-  } else if (
     display.includes("÷")
     || 
     display.includes("×")
@@ -174,6 +164,7 @@ function equals() {
     display = eval(display);
     $("#display").text(display);
     display = String(display);
+    isEqualsClicked = true;
   }
 }
 
