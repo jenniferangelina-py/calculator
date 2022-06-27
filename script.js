@@ -48,6 +48,9 @@ function appendOperator(operator) {
     display = display.slice(0, -1);
     display += operator;
     $("#display").text(display);
+  } else {
+    display += operator;
+    $("#display").text(display);
   }
 }
 
