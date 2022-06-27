@@ -58,7 +58,7 @@ button:active.green-bg {
 }
 
 #display {
-  grid-row: span 5;
+  grid-row: span 4;
   grid-column: span 4;
   background-color: #010101;
   width: 100%;
@@ -68,6 +68,18 @@ button:active.green-bg {
   font-size: 25px;
   letter-spacing: 1px;
   margin: 20px 20px 0 auto;
+  text-align: right;
+  font-weight: 300;
+}
+
+#shadow-result {
+  background-color: #010101;
+  width: 100%;
+  color: #FAFAFA;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 1px;
   text-align: right;
   font-weight: 300;
 }
