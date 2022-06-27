@@ -1,5 +1,23 @@
 var display = "";
+
+var shadow
+
 var isEqualsClicked = false;
+
+var numbers = /\d$/;
+
+function clear() {
+  display = "";
+  $("#display").text(display);
+}
+
+function appendParentheses() {
+  if (display === "" 
+  || display.endsWith("(")) {
+    display += "(";
+    $("#display").text(display);
+  }
+}
 
 function appendNumber(number) {
   if (!isEqualsClicked) {
@@ -14,26 +32,53 @@ function appendNumber(number) {
 }
 
 function appendDecimalSeparator() {
-  if (display === "") {
-    display = "0.";
-    $("#display").text(display);
-  } else if (display.endsWith("÷")) {
+  if (
+    display === ""
+    ||
+    display.endsWith("÷")
+    ||
+    display.endsWith("×")
+    ||
+    display.endsWith("−")
+    ||
+    display.endsWith("+")
+    ||
+    display.endsWith("(")
+  ) {
     display += "0.";
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    display += "0.";
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    display += "0.";
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
-    display += "0.";
-    $("#display").text(display);
-  } else {
-    display += ".";
     $("#display").text(display);
   }
 }
+
+function appendOperator(operator) {
+  if (
+    display.endsWith("÷")
+    ||
+    display.endsWith("×")
+    ||
+    display.endsWith("−")
+    ||
+    display.endsWith("+")
+    ||
+    display.endsWith("(")
+  ) {
+    display = display.slice(0, -1);
+    display += operator;
+    $("#display").text(display);
+  } else {
+    display += operator;
+    $("#display").text(display);
+  }
+}
+
+$("#clear").click(function(){
+  clear();
+});
+
+$("#percentage").click(function(){
+  appendPercentage();
+});
+
 
 $("#0").click(function(){
   appendNumber("0");
@@ -79,140 +124,52 @@ $("#decimal-separator").click(function(){
   appendDecimalSeparator();
 });
 
-function appendDivisionOperator() {
-  if (display === "") {
-    $("#display").text(display);
-  } else if (display.endsWith("÷")) {
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    display = display.slice(0, -1);
-    display += "÷";
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    display = display.slice(0, -1);
-    display += "÷";
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
-    display = display.slice(0, -1);
-    display += "÷";
-    $("#display").text(display);
-  } else if (display.endsWith("(")) {
-    $("#display").text(display);
-  } else {
-    display += "÷";
-    $("#display").text(display);
-  }
-}
-
 $("#division").click(function(){
-  appendDivisionOperator();
+  appendOperator("÷");
 });
-
-function appendMultiplicationOperator() {
-  if (display === "") {
-    $("#display").text(display);
-  } else if (display.endsWith("÷")) {
-    display = display.slice(0, -1);
-    display += "×";
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    display = display.slice(0, -1);
-    display += "×";
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
-    display = display.slice(0, -1);
-    display += "×";
-    $("#display").text(display);
-  } else if (display.endsWith("(")) {
-    $("#display").text(display);
-  } else {
-    display += "×";
-    $("#display").text(display);
-  }
-}
 
 $("#multiplication").click(function(){
-  appendMultiplicationOperator();
+  appendOperator("×");
 });
-
-function appendSubtractionOperator() {
-  if (display === "") {
-    $("#display").text(display);
-  } else if (display.endsWith("÷")) {
-    display = display.slice(0, -1);
-    display += "−";
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    display = display.slice(0, -1);
-    display += "−";
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
-    display = display.slice(0, -1);
-    display += "−";
-    $("#display").text(display);
-  } else if (display.endsWith("%")) {
-    $("#display").text(display);
-  } else {
-    display += "−";
-    $("#display").text(display);
-  }
-}
 
 $("#subtraction").click(function(){
-  appendSubtractionOperator();
+  appendOperator("−");
 });
-
-function appendAdditionOperator() {
-  if (display === "") {
-    $("#display").text(display);
-  } else if (display.endsWith("÷")) {
-    display = display.slice(0, -1);
-    display += "+";
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    display = display.slice(0, -1);
-    display += "+";
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    display = display.slice(0, -1);
-    display += "+";
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
-    $("#display").text(display);
-  } else {
-    display += "+";
-    $("#display").text(display);
-  }
-}
 
 $("#addition").click(function(){
-  appendAdditionOperator();
+  appendOperator("+");
 });
 
-function clear() {
-  display = "";
-  $("#display").text(display);
-}
+$("#parentheses").click(function(){
+  appendParentheses();
+});
 
-$("#clear").click(function(){
-  clear();
+$("#equals").click(function(){
+  equals();
 });
 
 function equals() {
-  if (display.endsWith("÷")
-    || display.endsWith("×")
-    || display.endsWith("−")
-    || display.endsWith("+")) {
+  if (
+    display.endsWith("÷")
+    || 
+    display.endsWith("×")
+    || 
+    display.endsWith("−")
+    || 
+    display.endsWith("+")
+  ) {
     $("#display").text(display);
-  } else if (display.includes("÷")
-    || display.includes("×")
-    || display.includes("−")
-    || display.includes("+")
-    || display.includes("%")) {
+  } else if (
+    display.includes("÷")
+    || 
+    display.includes("×")
+    || 
+    display.includes("−")
+    || 
+    display.includes("+")
+    || 
+    display.includes("%")
+  ) {
     display = display.replace("÷", "/");
     display = display.replace("×", "*");
     display = display.replace("−", "-");
@@ -223,43 +180,9 @@ function equals() {
   }
 }
 
-$("#equals").click(function(){
-  equals();
-});
-
 function appendPercentage() {
-  if (display === "") {
-    $("#display").text(display);
-  } else if (display.endsWith("÷")) {
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
-    $("#display").text(display);
-  } else if (display.endsWith("(")) {
-    $("#display").text(display);
-  } else {
+  if (numbers.test(display)) {
     display += "%";
     $("#display").text(display);
   }
 }
-
-$("#percentage").click(function(){
-  appendPercentage();
-});
-
-function appendParentheses() {
-  if (display === "" 
-  || display.endsWith("(")) {
-    display += "(";
-    $("#display").text(display);
-  }
-}
-
-$("#parentheses").click(function(){
-  appendParentheses();
-});
-
-console.log(display);
