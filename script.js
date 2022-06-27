@@ -62,7 +62,8 @@ function appendOperator(operator) {
   ) {
     display = display.slice(0, -1);
     display += operator;
-    $("<div class="green-ft">").text(display).appendTo($("#display"));
+    $("#display").append("<div class='green-ft'></div>")
+    $(".green-ft").text(display);
   } else {
     display += operator;
     $("#display").text(display);
