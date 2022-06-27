@@ -13,6 +13,28 @@ function appendNumber(number) {
   }
 }
 
+function appendDecimalSeparator() {
+  if (display === "") {
+    display = "0.";
+    $("#display").text(display);
+  } else if (display.endsWith("÷")) {
+    display += "0.";
+    $("#display").text(display);
+  } else if (display.endsWith("×")) {
+    display += "0.";
+    $("#display").text(display);
+  } else if (display.endsWith("−")) {
+    display += "0.";
+    $("#display").text(display);
+  } else if (display.endsWith("+")) {
+    display += "0.";
+    $("#display").text(display);
+  } else {
+    display += ".";
+    $("#display").text(display);
+  }
+}
+
 $("#0").click(function(){
   appendNumber("0");
 });
@@ -52,28 +74,6 @@ $("#8").click(function(){
 $("#9").click(function(){
   appendNumber("9");
 });
-
-function appendDecimalSeparator() {
-  if (display === "") {
-    display = "0.";
-    $("#display").text(display);
-  } else if (display.endsWith("÷")) {
-    display += "0.";
-    $("#display").text(display);
-  } else if (display.endsWith("×")) {
-    display += "0.";
-    $("#display").text(display);
-  } else if (display.endsWith("−")) {
-    display += "0.";
-    $("#display").text(display);
-  } else if (display.endsWith("+")) {
-    display += "0.";
-    $("#display").text(display);
-  } else {
-    display += ".";
-    $("#display").text(display);
-  }
-}
 
 $("#decimal-separator").click(function(){
   appendDecimalSeparator();
