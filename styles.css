@@ -77,4 +77,5 @@ button:active.green-bg {
 
 .green-ft {
   color: #9CD260;
+  display: inline-block;
 }
