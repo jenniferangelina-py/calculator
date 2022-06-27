@@ -66,7 +66,8 @@ function appendOperator(operator) {
     $("p").text(display).css("color", "green");
   } else {
     display += operator;
-    $("#display").text(display);
+    $("#display").add("p");
+    $("p").text(display).css("color", "green");
   }
 }
 
