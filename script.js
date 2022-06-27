@@ -34,9 +34,7 @@ function appendDecimalSeparator() {
 }
 
 function appendOperator(operator) {
-  if (display === "") {
-    $("#display").text(display);
-  } else if (
+  if (
     display.endsWith("÷")
     ||
     display.endsWith("×")
@@ -50,6 +48,7 @@ function appendOperator(operator) {
     display = display.slice(0, -1);
     display += operator;
     $("#display").text(display);
+  }
 }
 
 $("#0").click(function(){
