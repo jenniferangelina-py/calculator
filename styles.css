@@ -62,9 +62,6 @@ button:active.green-bg {
   grid-column: span 4;
   background-color: #010101;
   width: 100%;
-}
-
-#display {
   color: #FAFAFA;
   font-family: "Roboto";
   font-weight: 300;
