@@ -20,15 +20,12 @@ function appendParentheses() {
 }
 
 function appendNumber(number) {
-  if (!isEqualsClicked) {
-    display += number;
-    $("#display").text(display);
-  } else {
+  if (isEqualsClicked) {
     display = "";
-    display += number;
-    $("#display").text(display);
     isEqualsClicked = false;
   }
+  display += number;
+  $("#display").text(display);
 }
 
 function appendDecimalSeparator() {
