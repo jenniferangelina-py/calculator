@@ -61,9 +61,9 @@ function appendOperator(operator) {
     display.endsWith("(")
   ) {
     display = display.slice(0, -1);
-    operator.addClass("green-ft");
     display += operator;
-    $("#display").text(display);
+    $("#display").add("p");
+    $("p").text(display).css("color", "green");
   } else {
     display += operator;
     $("#display").text(display);
